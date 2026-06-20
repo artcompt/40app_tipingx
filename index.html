@@ -21,7 +21,7 @@ aside{width:196px;flex-shrink:0;background:var(--bg2);border-right:1px solid var
 .side-item:hover{background:var(--bg3);color:var(--tx);}.side-item.active{background:var(--tbg);color:var(--or);border-left-color:var(--or);font-weight:700;}
 .side-count{margin-left:auto;font-size:.66rem;color:var(--tx3);background:var(--bg3);padding:1px 6px;border-radius:8px;}
 main{flex:1;padding:28px 36px;}
-.page-header{margin-bottom:20px;}.page-label{font-size:.72rem;color:var(--or);font-weight:700;letter-spacing:1px;margin-bottom:4px;}.page-title{font-size:1.8rem;font-weight:800;}.page-credit{font-size:.9rem;font-weight:700;color:var(--tx2);margin-top:3px;margin-bottom:2px;}.page-copyright{font-size:.78rem;color:var(--or);font-weight:600;margin-top:2px;margin-bottom:2px;}.page-desc{font-size:.82rem;color:var(--tx2);margin-top:2px;}
+.page-header{margin-bottom:20px;}.page-label{font-size:.72rem;color:var(--or);font-weight:700;letter-spacing:1px;margin-bottom:4px;}.page-title{font-size:1.8rem;font-weight:800;}.page-credit{font-size:.9rem;font-weight:700;color:var(--tx2);margin-top:3px;}.page-copyright{font-size:.78rem;color:var(--or);font-weight:600;margin-top:2px;}.page-desc{font-size:.82rem;color:var(--tx2);margin-top:2px;}
 .filter-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:24px;}
 .fchip{display:flex;align-items:center;gap:5px;padding:6px 14px;border-radius:20px;border:1.5px solid var(--bd);font-size:.78rem;color:var(--tx2);background:var(--bg2);cursor:pointer;transition:all .15s;white-space:nowrap;}
 .fchip:hover{border-color:var(--or);color:var(--or);}.fchip.active{background:var(--or);color:#fff;border-color:var(--or);font-weight:700;}
@@ -38,9 +38,7 @@ main{flex:1;padding:28px 36px;}
 .card:hover .cimg img{transform:scale(1.04);}
 .no-img{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
 .ni-icon{font-size:2.2rem;}.ni-lbl{font-size:.62rem;color:var(--tx3);}
-.img-ph{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:var(--bg3);animation:pulse 1.2s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:.3}50%{opacity:.9}}
-a.cimg::after{content:'🔗 앱 열기';position:absolute;bottom:0;left:0;right:0;background:rgba(249,115,22,.9);color:#fff;font-size:.74rem;font-weight:700;text-align:center;padding:8px;opacity:0;transition:opacity .2s;pointer-events:none;}
+a.cimg::after{content:'🔗 앱 열기';position:absolute;bottom:0;left:0;right:0;background:rgba(249,115,22,.9);color:#fff;font-size:.74rem;font-weight:700;text-align:center;padding:8px;opacity:0;transition:opacity .2s;}
 a.cimg:hover::after{opacity:1;}
 .cbody{padding:8px 10px 6px;flex-shrink:0;}
 .cr1{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px;}
@@ -67,14 +65,15 @@ body.dark .cacts .bv:hover{background:#1E1B4B;color:#818CF8;}body.dark .cacts .b
 .save-menu.open{display:block;}
 .save-item{padding:12px 18px;font-size:.84rem;cursor:pointer;color:var(--tx);transition:background .15s;display:flex;align-items:center;gap:8px;}
 .save-item:hover{background:var(--tbg);color:var(--or);}
-.save-item+.save-item{border-top:1px solid var(--bd);}display:none;position:fixed;inset:0;background:var(--ov);z-index:1000;align-items:center;justify-content:center;}.moverlay.open{display:flex;}
+.save-item+.save-item{border-top:1px solid var(--bd);}
+.moverlay{display:none;position:fixed;inset:0;background:var(--ov);z-index:1000;align-items:center;justify-content:center;}.moverlay.open{display:flex;}
 .modal{background:var(--mbg);border-radius:16px;padding:28px;width:460px;box-shadow:0 20px 60px rgba(0,0,0,.28);animation:mIn .2s ease;max-height:90vh;overflow-y:auto;}
 @keyframes mIn{from{opacity:0;transform:scale(.93)}to{opacity:1;transform:scale(1)}}
 .modal-title{font-size:1rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:8px;}
 .frow{margin-bottom:14px;}.frow label{display:block;font-size:.74rem;font-weight:700;color:var(--tx2);margin-bottom:5px;}
 .frow input{width:100%;padding:9px 12px;border-radius:8px;border:1.5px solid var(--bd);background:var(--bg3);color:var(--tx);font-size:.84rem;outline:none;transition:border-color .2s;font-family:inherit;}
-.frow input:focus{border-color:var(--or);}.frow input[type=date]{cursor:pointer;}
-.frow input[type=date]::-webkit-calendar-picker-indicator{cursor:pointer;opacity:.6;}
+.frow input:focus{border-color:var(--or);}
+.frow input[type=date]{cursor:pointer;}
 body.dark .frow input[type=date]::-webkit-calendar-picker-indicator{filter:invert(1);}
 .mbtns{display:flex;gap:10px;margin-top:20px;justify-content:flex-end;}
 .mbtns button{padding:8px 22px;border-radius:20px;font-size:.82rem;font-weight:700;cursor:pointer;border:none;}
@@ -101,7 +100,7 @@ body.dark .frow input[type=date]::-webkit-calendar-picker-indicator{filter:inver
 .dmeta{display:flex;align-items:center;gap:7px;margin-bottom:6px;}.dcode{font-size:.68rem;font-weight:800;color:var(--or);}.dtag{font-size:.6rem;color:var(--tc);background:var(--tbg);padding:2px 8px;border-radius:8px;}
 .dtitle{font-size:1.05rem;font-weight:800;line-height:1.3;margin-bottom:3px;}.dsub{font-size:.74rem;color:var(--tx2);margin-bottom:5px;}.ddate{display:flex;align-items:center;gap:4px;font-size:.68rem;color:var(--tx3);margin-bottom:3px;}
 .ddiv{height:1px;background:var(--bd);margin:11px 0;}.dlabel{font-size:.7rem;font-weight:700;color:var(--tx2);margin-bottom:6px;}
-.dtarea{width:100%;min-height:320px;padding:10px 12px;border-radius:9px;border:1.5px solid var(--bd);background:var(--bg3);color:var(--tx);font-size:.78rem;line-height:1.75;resize:vertical;outline:none;font-family:inherit;}.dtarea:focus{border-color:var(--or);}
+.dtarea{width:100%;min-height:120px;padding:10px 12px;border-radius:9px;border:1.5px solid var(--bd);background:var(--bg3);color:var(--tx);font-size:.78rem;line-height:1.75;resize:vertical;outline:none;font-family:inherit;}.dtarea:focus{border-color:var(--or);}
 .dcharcnt{font-size:.65rem;color:var(--tx3);text-align:right;margin-top:4px;}
 .dbtns{display:flex;gap:8px;margin-top:12px;justify-content:flex-end;}
 .dedit{padding:6px 14px;border-radius:20px;border:1.5px solid var(--or);color:var(--or);background:transparent;font-size:.73rem;font-weight:700;cursor:pointer;}.dedit:hover{background:var(--or);color:#fff;}
@@ -115,10 +114,12 @@ body.dark .frow input[type=date]::-webkit-calendar-picker-indicator{filter:inver
   <nav>
     <a>전략</a><a>앱 목록</a><a>플랫폼</a>
     <div class="theme-tog" onclick="toggleTheme()"><div class="tog-track"><div class="tog-knob"></div></div><span id="tlabel">라이트</span></div>
-    <button class="edit-btn" onclick="toggleSaveMenu(event)">💾 저장하기 ▾</button>
-    <div class="save-menu" id="saveMenu">
-      <div class="save-item" onclick="exportJSON()">📥 프로젝트 저장 (JSON)</div>
-      <div class="save-item" onclick="trigImport()">📤 프로젝트 불러오기</div>
+    <div style="position:relative">
+      <button class="edit-btn" onclick="toggleSaveMenu(event)">💾 저장하기 ▾</button>
+      <div class="save-menu" id="saveMenu">
+        <div class="save-item" onclick="exportJSON()">📥 프로젝트 저장 (JSON)</div>
+        <div class="save-item" onclick="trigImport()">📤 프로젝트 불러오기</div>
+      </div>
     </div>
     <input type="file" id="importFile" accept=".json" style="display:none" onchange="importJSON(event)">
   </nav>
@@ -202,7 +203,6 @@ body.dark .frow input[type=date]::-webkit-calendar-picker-indicator{filter:inver
 </div>
 
 <script>
-// ─── 상수 ─────────────────────────────────────────────
 const CATS = [
   {id:'c1',icon:'🧠',name:'인지훈련',    desc:'집중력·판단력·반응속도·문제해결 능력 향상'},
   {id:'c2',icon:'💭',name:'기억력 향상',  desc:'단기·장기 기억력 강화 및 회상 훈련'},
@@ -213,72 +213,63 @@ const CATS = [
   {id:'c7',icon:'🏃',name:'운동신경 훈련',desc:'균형감·협응력·신체 기능 향상'},
   {id:'c8',icon:'🌿',name:'마음챙김',    desc:'명상·이완·정서 안정 및 스트레스 관리'},
 ];
-const EMOJIS = ['🧩','🎯','⚡','🔍','💡','🎲','📊','🔔','🛡️','🌟','🎪','🎨','🏅','🔮','🎭'];
-const SUBS   = ['집중력·반응속도','기억력 강화','공간지각·퍼즐','숫자 인지','전략적 사고','언어 표현','균형 감각','정서 안정','혈압 관리','수면 개선'];
-const K_META = 'btx_meta';
-const K_IMG  = id => 'btx_img_' + id;
+const EMOJIS=['🧩','🎯','⚡','🔍','💡','🎲','📊','🔔','🛡️','🌟','🎪','🎨','🏅','🔮','🎭'];
+const SUBS=['집중력·반응속도','기억력 강화','공간지각·퍼즐','숫자 인지','전략적 사고','언어 표현','균형 감각','정서 안정','혈압 관리','수면 개선'];
+const K_META='btx_meta';
+const K_IMG=id=>'btx_img_'+id;
 
-// ─── 상태 ─────────────────────────────────────────────
-const MEM = {};
-let ST={}, SEQ=1, CAT='all', DARK=false;
-let ET=null, DT=null, VT=null, PB=null;
+const MEM={};
+let ST={},SEQ=1,CAT='all',DARK=false;
+let ET=null,DT=null,VT=null,PB=null;
 
-// ─── IndexedDB ────────────────────────────────────────
-let _idb = null;
-function openIDB() {
-  if (_idb) return Promise.resolve(_idb);
-  return new Promise((res,rej) => {
-    const r = indexedDB.open('btxDB',1);
-    r.onupgradeneeded = e => e.target.result.createObjectStore('imgs',{keyPath:'id'});
-    r.onsuccess = e => { _idb=e.target.result; res(_idb); };
-    r.onerror = () => rej(r.error);
-    r.onblocked = () => rej(new Error('blocked'));
+// IndexedDB
+let _idb=null;
+function openIDB(){
+  if(_idb)return Promise.resolve(_idb);
+  return new Promise((res,rej)=>{
+    const r=indexedDB.open('btxDB',1);
+    r.onupgradeneeded=e=>e.target.result.createObjectStore('imgs',{keyPath:'id'});
+    r.onsuccess=e=>{_idb=e.target.result;res(_idb);};
+    r.onerror=()=>rej(r.error);
   });
 }
 
-// ─── 이미지 저장/로드 ─────────────────────────────────
-async function saveImg(id, b64) {
+async function saveImg(id,b64){
   delete MEM[id];
-  if (!b64) {
-    try { const db=await openIDB(); db.transaction('imgs','readwrite').objectStore('imgs').delete(String(id)); } catch(e){}
-    try { localStorage.removeItem(K_IMG(id)); } catch(e){}
+  if(!b64){
+    try{const db=await openIDB();db.transaction('imgs','readwrite').objectStore('imgs').delete(String(id));}catch(e){}
+    try{localStorage.removeItem(K_IMG(id));}catch(e){}
     return;
   }
-  MEM[id] = b64;
-  try {
-    const db = await openIDB();
-    await new Promise((res,rej) => {
-      const r = db.transaction('imgs','readwrite').objectStore('imgs').put({id:String(id),data:b64});
-      r.onsuccess=res; r.onerror=()=>rej(r.error);
+  MEM[id]=b64;
+  try{
+    const db=await openIDB();
+    await new Promise((res,rej)=>{
+      const r=db.transaction('imgs','readwrite').objectStore('imgs').put({id:String(id),data:b64});
+      r.onsuccess=res;r.onerror=()=>rej(r.error);
     });
     return;
-  } catch(e){}
-  try { localStorage.setItem(K_IMG(id), b64); }
-  catch(e) {
-    const old = Object.keys(localStorage).find(k=>k.startsWith('btx_img_')&&k!==K_IMG(id));
-    if(old) try{localStorage.removeItem(old);}catch(e2){}
-    try { localStorage.setItem(K_IMG(id), b64); }
-    catch(e3) { toast('⚠️ 이미지 저장 실패 — 세션 중만 유지'); }
-  }
+  }catch(e){}
+  try{localStorage.setItem(K_IMG(id),b64);}
+  catch(e){toast('⚠️ 이미지 저장 실패 — 세션 중만 유지');}
 }
 
-async function loadImg(id) {
-  if (MEM[id]) return MEM[id];
-  try {
-    const db = await openIDB();
-    const v = await new Promise((res,rej) => {
-      const r = db.transaction('imgs','readonly').objectStore('imgs').get(String(id));
-      r.onsuccess=()=>res(r.result?.data??null); r.onerror=()=>rej(r.error);
+async function loadImg(id){
+  if(MEM[id])return MEM[id];
+  try{
+    const db=await openIDB();
+    const v=await new Promise((res,rej)=>{
+      const r=db.transaction('imgs','readonly').objectStore('imgs').get(String(id));
+      r.onsuccess=()=>res(r.result?.data??null);r.onerror=()=>rej(r.error);
     });
-    if(v){ MEM[id]=v; return v; }
-  } catch(e){}
-  try { const v=localStorage.getItem(K_IMG(id)); if(v){MEM[id]=v;return v;} } catch(e){}
+    if(v){MEM[id]=v;return v;}
+  }catch(e){}
+  try{const v=localStorage.getItem(K_IMG(id));if(v){MEM[id]=v;return v;}}catch(e){}
   return null;
 }
 
-// ─── 텍스트 저장/로드 ─────────────────────────────────
-function saveMeta() {
-  try {
+function saveMeta(){
+  try{
     const d={SEQ,DARK,apps:{}};
     CATS.forEach(c=>{
       d.apps[c.id]=ST[c.id].map(a=>({
@@ -288,47 +279,43 @@ function saveMeta() {
       }));
     });
     localStorage.setItem(K_META,JSON.stringify(d));
-  } catch(e){ toast('⚠️ 저장 실패: '+e.message); }
+  }catch(e){toast('⚠️ 저장 실패: '+e.message);}
 }
 
-function loadMeta() {
-  const keys=[K_META,'btxMeta','btx-final','btx-v5','btx-v4','btx-dash-v3'];
+function loadMeta(){
   let raw=null;
-  for(const k of keys){ try{raw=localStorage.getItem(k);if(raw)break;}catch(e){} }
-  if(!raw){ initST(); return; }
-  try {
+  try{raw=localStorage.getItem(K_META);}catch(e){}
+  if(!raw){initST();return;}
+  try{
     const d=JSON.parse(raw);
-    SEQ=d.SEQ||d.globalSeq||1; DARK=d.DARK||d.isDark||false;
-    const src=d.apps||d.ST||d.state||{};
+    SEQ=d.SEQ||1;DARK=d.DARK||false;
+    const src=d.apps||{};
     ST={};
     CATS.forEach(c=>{
       ST[c.id]=(src[c.id]||[]).map(a=>({
-        id:a.id||(Date.now()+Math.random()),code:a.code||'',name:a.name||'',sub:a.sub||'',
+        id:a.id,code:a.code||'',name:a.name||'',sub:a.sub||'',
         date:a.date||today(),url:a.url||'',desc:a.desc||'',
         cat:a.cat||c.name,catIcon:a.catIcon||c.icon,icon:a.icon||'🧩',
         imgUrl:a.imgUrl||'',imgData:null
       }));
     });
-    if(!localStorage.getItem(K_META)) saveMeta();
-  } catch(e){ initST(); }
+  }catch(e){initST();}
 }
-function initST(){ CATS.forEach(c=>ST[c.id]=[]); SEQ=1; DARK=false; }
+function initST(){CATS.forEach(c=>ST[c.id]=[]);SEQ=1;DARK=false;}
 
-// ─── 유틸 ─────────────────────────────────────────────
-function today(){ const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
-function shortHost(u){ try{return new URL(u).hostname.replace(/^www\./,'');}catch(e){return u.replace(/^https?:\/\/(www\.)?/,'').split('/')[0].slice(0,30);} }
-function fixUrl(u){ if(!u||!u.trim())return''; u=u.trim(); return /^https?:\/\//i.test(u)?u:'https://'+u; }
+function today(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function shortHost(u){try{return new URL(u).hostname.replace(/^www\./,'');}catch(e){return u.replace(/^https?:\/\/(www\.)?/,'').split('/')[0].slice(0,30);}}
+function fixUrl(u){if(!u||!u.trim())return'';u=u.trim();return /^https?:\/\//i.test(u)?u:'https://'+u;}
 let _TT;
-function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(_TT); _TT=setTimeout(()=>t.classList.remove('show'),2500); }
-function toggleTheme(){ DARK=!DARK; applyTheme(); saveMeta(); }
-function applyTheme(){ document.body.classList.toggle('dark',DARK); document.getElementById('tlabel').textContent=DARK?'다크':'라이트'; }
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(_TT);_TT=setTimeout(()=>t.classList.remove('show'),2500);}
+function toggleTheme(){DARK=!DARK;applyTheme();saveMeta();}
+function applyTheme(){document.body.classList.toggle('dark',DARK);document.getElementById('tlabel').textContent=DARK?'다크':'라이트';}
 
-// ─── IntersectionObserver ─────────────────────────────
-const imgObs = new IntersectionObserver(entries=>{
+const imgObs=new IntersectionObserver(entries=>{
   entries.forEach(async entry=>{
-    if(!entry.isIntersecting) return;
-    const wrap=entry.target, id=wrap.dataset.appid;
-    if(!id) return;
+    if(!entry.isIntersecting)return;
+    const wrap=entry.target,id=wrap.dataset.appid;
+    if(!id)return;
     imgObs.unobserve(wrap);
     const b64=await loadImg(id);
     if(b64){
@@ -337,132 +324,111 @@ const imgObs = new IntersectionObserver(entries=>{
       el.src=b64;
       wrap.querySelector('.img-ph,.no-img')?.remove();
       wrap.appendChild(el);
-      for(const c of CATS){ const a=ST[c.id].find(x=>String(x.id)===id); if(a){a.imgData=b64;break;} }
-    } else {
+      for(const c of CATS){const a=ST[c.id].find(x=>String(x.id)===id);if(a){a.imgData=b64;break;}}
+    }else{
       const ph=wrap.querySelector('.img-ph');
-      if(ph){ ph.className='no-img'; ph.innerHTML=`<span class="ni-icon">${wrap.dataset.icon||'🖼️'}</span><span class="ni-lbl">썸네일 없음</span>`; }
+      if(ph){ph.className='no-img';ph.innerHTML=`<span class="ni-icon">${wrap.dataset.icon||'🖼️'}</span><span class="ni-lbl">썸네일 없음</span>`;}
     }
   });
 },{rootMargin:'300px'});
 
-// ─── 이미지 업로드 UI ─────────────────────────────────
-function switchTab(t){ ['File','Url'].forEach(x=>{ document.getElementById('tab'+x).classList.toggle('active',x.toLowerCase()===t); document.getElementById('panel'+x).classList.toggle('active',x.toLowerCase()===t); }); }
-function trigFile(){ document.getElementById('ffile').click(); }
-function onFile(e){ const f=e.target.files[0]; if(f) readFile(f); e.target.value=''; }
+function switchTab(t){
+  ['File','Url'].forEach(x=>{
+    document.getElementById('tab'+x).classList.toggle('active',x.toLowerCase()===t);
+    document.getElementById('panel'+x).classList.toggle('active',x.toLowerCase()===t);
+  });
+}
+function trigFile(){document.getElementById('ffile').click();}
+function onFile(e){const f=e.target.files[0];if(f)readFile(f);e.target.value='';}
 function readFile(file){
-  if(!file.type.startsWith('image/')){ setMsg('⚠️ 이미지만 가능합니다'); return; }
+  if(!file.type.startsWith('image/')){setMsg('⚠️ 이미지만 가능합니다');return;}
   const r=new FileReader();
-  r.onload=async ev=>{ const c=await compress(ev.target.result); PB=c; showPrev(c); setMsg('✅ 이미지 적용됨'); };
+  r.onload=async ev=>{const c=await compress(ev.target.result);PB=c;showPrev(c);setMsg('✅ 이미지 적용됨');};
   r.readAsDataURL(file);
 }
-function showPrev(src){ const i=document.getElementById('prevImg'); i.src=src; i.style.display='block'; document.getElementById('upHint').style.display='none'; document.getElementById('upActions').style.display='flex'; }
-function rmImg(){ PB=null; const i=document.getElementById('prevImg'); i.src=''; i.style.display='none'; document.getElementById('upHint').style.display='flex'; document.getElementById('upActions').style.display='none'; setMsg(''); }
-function setMsg(m){ const el=document.getElementById('upMsg'); if(el) el.textContent=m; }
-function resetUpload(){ rmImg(); PB=null; const ui=document.getElementById('imgUrlInput'); if(ui) ui.value=''; switchTab('file'); }
+function showPrev(src){const i=document.getElementById('prevImg');i.src=src;i.style.display='block';document.getElementById('upHint').style.display='none';document.getElementById('upActions').style.display='flex';}
+function rmImg(){PB=null;const i=document.getElementById('prevImg');i.src='';i.style.display='none';document.getElementById('upHint').style.display='flex';document.getElementById('upActions').style.display='none';setMsg('');}
+function setMsg(m){const el=document.getElementById('upMsg');if(el)el.textContent=m;}
+function resetUpload(){rmImg();PB=null;const ui=document.getElementById('imgUrlInput');if(ui)ui.value='';switchTab('file');}
 function compress(url,mx=600,q=0.8){
   return new Promise(res=>{
     const img=new Image();
-    img.onload=()=>{ let w=img.width,h=img.height; if(w>mx||h>mx){if(w>h){h=Math.round(h*mx/w);w=mx;}else{w=Math.round(w*mx/h);h=mx;}} const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);res(c.toDataURL('image/jpeg',q)); };
-    img.onerror=()=>res(url); img.src=url;
+    img.onload=()=>{let w=img.width,h=img.height;if(w>mx||h>mx){if(w>h){h=Math.round(h*mx/w);w=mx;}else{w=Math.round(w*mx/h);h=mx;}}const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);res(c.toDataURL('image/jpeg',q));};
+    img.onerror=()=>res(url);img.src=url;
   });
 }
 function initDrag(){
   const box=document.getElementById('upbox');
   ['dragenter','dragover'].forEach(ev=>box.addEventListener(ev,e=>{e.preventDefault();e.stopPropagation();box.classList.add('dragover');}));
   ['dragleave','dragend'].forEach(ev=>box.addEventListener(ev,()=>box.classList.remove('dragover')));
-  box.addEventListener('drop',e=>{ e.preventDefault();e.stopPropagation();box.classList.remove('dragover'); const f=e.dataTransfer.files[0]; if(f){readFile(f);return;} const u=e.dataTransfer.getData('text/plain'); if(u&&/^https?:\/\//i.test(u)){document.getElementById('imgUrlInput').value=u;switchTab('url');} });
+  box.addEventListener('drop',e=>{e.preventDefault();e.stopPropagation();box.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f){readFile(f);return;}const u=e.dataTransfer.getData('text/plain');if(u&&/^https?:\/\//i.test(u)){document.getElementById('imgUrlInput').value=u;switchTab('url');}});
 }
 function initPaste(){
-  document.addEventListener('paste',e=>{ if(!document.getElementById('mEdit').classList.contains('open'))return; const items=[...(e.clipboardData?.items||[])]; const imgItem=items.find(i=>i.type.startsWith('image/')); if(imgItem){readFile(imgItem.getAsFile());switchTab('file');} });
+  document.addEventListener('paste',e=>{if(!document.getElementById('mEdit').classList.contains('open'))return;const items=[...(e.clipboardData?.items||[])];const imgItem=items.find(i=>i.type.startsWith('image/'));if(imgItem){readFile(imgItem.getAsFile());switchTab('file');}});
 }
 
-// ─── 저장 메뉴 ────────────────────────────────────────
-function toggleSaveMenu(e){
-  e.stopPropagation();
-  document.getElementById('saveMenu').classList.toggle('open');
-}
-document.addEventListener('click', ()=> document.getElementById('saveMenu')?.classList.remove('open'));
+function toggleSaveMenu(e){e.stopPropagation();document.getElementById('saveMenu').classList.toggle('open');}
+document.addEventListener('click',()=>document.getElementById('saveMenu')?.classList.remove('open'));
 
-// ─── JSON 내보내기 (이미지 포함) ──────────────────────
 async function exportJSON(){
   document.getElementById('saveMenu').classList.remove('open');
   toast('⏳ JSON 파일 생성 중...');
-  const d = {SEQ, DARK, apps:{}};
-  for(const c of CATS){
-    d.apps[c.id] = [];
-    for(const a of ST[c.id]){
-      // 이미지: 메모리 → IndexedDB 순서로 로드
-      let img = a.imgData || MEM[a.id] || null;
-      if(!img) img = await loadImg(a.id);
-      d.apps[c.id].push({
-        id:a.id, code:a.code, name:a.name, sub:a.sub,
-        date:a.date, url:a.url, desc:a.desc,
-        cat:a.cat, catIcon:a.catIcon, icon:a.icon,
-        imgUrl:a.imgUrl||'',
-        imgData: img || ''  // base64 이미지 포함
-      });
-    }
-  }
-  const blob = new Blob([JSON.stringify(d, null, 2)], {type:'application/json'});
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href = url;
-  a.download = `btx-dashboard-${today()}.json`;
-  a.click();
-  URL.revokeObjectURL(url);
-  toast('✅ JSON 저장 완료!');
-}
-
-// ─── JSON 불러오기 ────────────────────────────────────
-function trigImport(){
-  document.getElementById('saveMenu').classList.remove('open');
-  document.getElementById('importFile').click();
-}
-async function importJSON(e){
-  const file = e.target.files[0];
-  if(!file){ return; }
-  e.target.value = '';
-  toast('⏳ 불러오는 중...');
-  try{
-    const text = await file.text();
-    const d    = JSON.parse(text);
-    SEQ  = d.SEQ  || 1;
-    DARK = d.DARK || false;
-    ST   = {};
-    const src = d.apps || {};
+  try {
+    const d={SEQ,DARK,apps:{}};
     for(const c of CATS){
-      ST[c.id] = (src[c.id]||[]).map(a=>({
-        id:a.id, code:a.code||'', name:a.name||'', sub:a.sub||'',
-        date:a.date||today(), url:a.url||'', desc:a.desc||'',
-        cat:a.cat||c.name, catIcon:a.catIcon||c.icon, icon:a.icon||'🧩',
-        imgUrl:a.imgUrl||'',
-        imgData: a.imgData||null
-      }));
-      // IndexedDB에도 이미지 저장 (영구 보관)
+      d.apps[c.id]=[];
       for(const a of ST[c.id]){
-        if(a.imgData){
-          MEM[a.id] = a.imgData;
-          await saveImg(a.id, a.imgData);
-        }
+        let img=a.imgData||MEM[a.id]||null;
+        d.apps[c.id].push({id:a.id,code:a.code,name:a.name,sub:a.sub,date:a.date,url:a.url,desc:a.desc,cat:a.cat,catIcon:a.catIcon,icon:a.icon,imgUrl:a.imgUrl||'',imgData:img||''});
       }
     }
-    saveMeta();
-    applyTheme();
-    renderAll();
-    toast('✅ 프로젝트 불러오기 완료!');
-  }catch(err){
-    toast('⚠️ 불러오기 실패: 올바른 JSON 파일인지 확인하세요');
+    const json=JSON.stringify(d,null,2);
+    const blob=new Blob([json],{type:'application/json'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url;
+    a.download=`btx-dashboard-${today()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},1000);
+    toast('✅ JSON 저장 완료!');
+  } catch(err) {
+    toast('⚠️ 저장 실패: '+err.message);
     console.error(err);
   }
 }
+
+function trigImport(){document.getElementById('saveMenu').classList.remove('open');document.getElementById('importFile').click();}
+async function importJSON(e){
+  const file=e.target.files[0];if(!file)return;e.target.value='';
+  toast('⏳ 불러오는 중...');
+  try{
+    const text=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=()=>rej(r.error);r.readAsText(file,'UTF-8');});
+    const d=JSON.parse(text);
+    SEQ=d.SEQ||1;DARK=d.DARK||false;ST={};
+    const src=d.apps||{};
+    for(const c of CATS){
+      ST[c.id]=(src[c.id]||[]).map(a=>({
+        id:a.id,code:a.code||'',name:a.name||'',sub:a.sub||'',
+        date:a.date||today(),url:a.url||'',desc:a.desc||'',
+        cat:a.cat||c.name,catIcon:a.catIcon||c.icon,icon:a.icon||'🧩',
+        imgUrl:a.imgUrl||'',imgData:a.imgData||null
+      }));
+      for(const a of ST[c.id]){if(a.imgData){MEM[a.id]=a.imgData;}}
+    }
+    applyTheme();renderAll();
+    toast('✅ 프로젝트 불러오기 완료!');
+  }catch(err){toast('⚠️ 불러오기 실패: 올바른 JSON 파일인지 확인하세요');console.error(err);}
+}
+
 function addApp(cid){
   const apps=ST[cid],cat=CATS.find(c=>c.id===cid);
   apps.push({id:Date.now(),code:`BTx${String(SEQ++).padStart(2,'0')}`,icon:EMOJIS[(apps.length+CATS.indexOf(cat)*2)%EMOJIS.length],name:`${cat.name} 앱 ${apps.length+1}`,sub:SUBS[(apps.length+CATS.indexOf(cat))%SUBS.length],cat:cat.name,catIcon:cat.icon,imgData:null,imgUrl:'',url:'',desc:'',date:today()});
-  saveMeta(); renderAll();
+  saveMeta();renderAll();
 }
 
 function openEdit(cid,idx){
-  ET={cid,idx}; const app=ST[cid][idx];
+  ET={cid,idx};const app=ST[cid][idx];
   document.getElementById('eCode').value=app.code;
   document.getElementById('eName').value=app.name;
   document.getElementById('eSub').value=app.sub;
@@ -471,14 +437,14 @@ function openEdit(cid,idx){
   document.getElementById('imgUrlInput').value=app.imgUrl||'';
   PB=null;
   const cached=app.imgData||MEM[app.id]||null;
-  if(app.imgUrl&&!cached){ showPrev(app.imgUrl); switchTab('url'); }
-  else if(cached){ showPrev(cached); PB=cached; switchTab('file'); }
-  else{ resetUpload(); }
+  if(app.imgUrl&&!cached){showPrev(app.imgUrl);switchTab('url');}
+  else if(cached){showPrev(cached);PB=cached;switchTab('file');}
+  else{resetUpload();}
   document.getElementById('mEdit').classList.add('open');
 }
 
 async function doEdit(){
-  if(!ET) return;
+  if(!ET)return;
   const app=ST[ET.cid][ET.idx];
   app.code=document.getElementById('eCode').value.trim()||app.code;
   app.name=document.getElementById('eName').value.trim()||app.name;
@@ -488,31 +454,28 @@ async function doEdit(){
   const urlTab=document.getElementById('tabUrl').classList.contains('active');
   const imgUrlVal=document.getElementById('imgUrlInput').value.trim();
   const prevVis=document.getElementById('prevImg').style.display!=='none';
-  if(urlTab&&imgUrlVal){ app.imgUrl=fixUrl(imgUrlVal); app.imgData=null; await saveImg(app.id,null); }
-  else if(urlTab&&!imgUrlVal){ /* 변경 없음 */ }
-  else if(!urlTab&&PB&&PB!==(app.imgData||MEM[app.id])){ const c=await compress(PB); app.imgData=c; app.imgUrl=''; await saveImg(app.id,c); }
-  else if(!urlTab&&!prevVis&&!app.imgUrl&&!MEM[app.id]){ app.imgData=null; app.imgUrl=''; await saveImg(app.id,null); }
-  saveMeta(); closeAll(); renderAll();
+  if(urlTab&&imgUrlVal){app.imgUrl=fixUrl(imgUrlVal);app.imgData=null;await saveImg(app.id,null);}
+  else if(!urlTab&&PB&&PB!==(app.imgData||MEM[app.id])){const c=await compress(PB);app.imgData=c;app.imgUrl='';await saveImg(app.id,c);}
+  else if(!urlTab&&!prevVis&&!app.imgUrl&&!MEM[app.id]){app.imgData=null;app.imgUrl='';await saveImg(app.id,null);}
+  saveMeta();closeAll();renderAll();
   toast(app.url?`🔗 ${shortHost(app.url)} 저장됨`:'💾 저장되었습니다');
 }
 
-function openDel(cid,idx){ DT={cid,idx}; document.getElementById('delName').textContent=`${ST[cid][idx].code} · ${ST[cid][idx].name}`; document.getElementById('mDel').classList.add('open'); }
-function doDel(){ if(!DT)return; saveImg(ST[DT.cid][DT.idx].id,null); ST[DT.cid].splice(DT.idx,1); saveMeta(); closeAll(); renderAll(); }
-function closeAll(){ ['mDetail','mEdit','mDel'].forEach(id=>document.getElementById(id).classList.remove('open')); ET=DT=VT=null; resetUpload(); }
+function openDel(cid,idx){DT={cid,idx};document.getElementById('delName').textContent=`${ST[cid][idx].code} · ${ST[cid][idx].name}`;document.getElementById('mDel').classList.add('open');}
+function doDel(){if(!DT)return;saveImg(ST[DT.cid][DT.idx].id,null);ST[DT.cid].splice(DT.idx,1);saveMeta();closeAll();renderAll();}
+function closeAll(){['mDetail','mEdit','mDel'].forEach(id=>document.getElementById(id).classList.remove('open'));ET=DT=VT=null;resetUpload();}
 document.querySelectorAll('.moverlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeAll();}));
-document.querySelectorAll('.modal,.dmodal').forEach(m=>['click','keydown','keyup','mousedown'].forEach(ev=>m.addEventListener(ev,e=>e.stopPropagation())));
 
-// ─── 상세보기 ─────────────────────────────────────────
-function updCC(el){ const cc=document.getElementById('dCC'); if(!cc)return; cc.textContent=`${el.value.length} / 2000자`; cc.style.color=el.value.length>1800?'#EF4444':el.value.length>1500?'#F97316':''; }
+function updCC(el){const cc=document.getElementById('dCC');if(!cc)return;cc.textContent=`${el.value.length} / 2000자`;cc.style.color=el.value.length>1800?'#EF4444':el.value.length>1500?'#F97316':'';}
 function openDetail(cid,idx){
-  VT={cid,idx}; const app=ST[cid][idx];
+  VT={cid,idx};const app=ST[cid][idx];
   document.getElementById('dCode').textContent=app.code;
   document.getElementById('dTag').textContent=`${app.catIcon} ${app.cat}`;
   document.getElementById('dTitle').textContent=app.name;
   document.getElementById('dSub').textContent=app.sub;
   document.getElementById('dDate').textContent=app.date||today();
   document.getElementById('dUrlLine').innerHTML=app.url?`<a href="${app.url}" target="_blank" rel="noopener noreferrer" style="font-size:.68rem;color:var(--or);text-decoration:none;">🔗 ${shortHost(app.url)}</a>`:`<span style="font-size:.68rem;color:var(--tx3)">URL 미입력</span>`;
-  document.getElementById('dDesc').value=app.desc||''; updCC(document.getElementById('dDesc'));
+  document.getElementById('dDesc').value=app.desc||'';updCC(document.getElementById('dDesc'));
   document.getElementById('dNoIcon').textContent=app.icon;
   const di=document.getElementById('dImg'),dn=document.getElementById('dNoImg');
   const src=app.imgData||MEM[app.id]||app.imgUrl||null;
@@ -520,23 +483,22 @@ function openDetail(cid,idx){
   document.getElementById('dEditBtn').onclick=()=>{closeAll();openEdit(cid,idx);};
   document.getElementById('mDetail').classList.add('open');
 }
-function saveDesc(){ if(!VT)return; ST[VT.cid][VT.idx].desc=document.getElementById('dDesc').value; saveMeta(); toast('💾 설명 저장됨'); }
+function saveDesc(){if(!VT)return;ST[VT.cid][VT.idx].desc=document.getElementById('dDesc').value;saveMeta();toast('💾 설명 저장됨');}
 
-// ─── 카드 생성 ────────────────────────────────────────
 function makeCard(app,cid,idx){
-  const card=document.createElement('div'); card.className='card';
+  const card=document.createElement('div');card.className='card';
   const cached=app.imgData||MEM[app.id]||null;
-  const imgWrap=document.createElement(app.url?'a':'div'); imgWrap.className='cimg';
+  const imgWrap=document.createElement(app.url?'a':'div');imgWrap.className='cimg';
   if(app.url){imgWrap.href=app.url;imgWrap.target='_blank';imgWrap.rel='noopener noreferrer';}
-  if(cached){ imgWrap.innerHTML=`<img src="${cached}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">`; }
-  else if(app.imgUrl){ imgWrap.innerHTML=`<img src="${app.imgUrl}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentNode.innerHTML='<div class=no-img><span class=ni-icon>🖼️</span><span class=ni-lbl>로드 실패</span></div>'">`; }
-  else{ imgWrap.innerHTML=`<div class="img-ph">⏳</div>`; imgWrap.dataset.appid=String(app.id); imgWrap.dataset.icon=app.icon; imgObs.observe(imgWrap); }
+  if(cached){imgWrap.innerHTML=`<img src="${cached}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">`;}
+  else if(app.imgUrl){imgWrap.innerHTML=`<img src="${app.imgUrl}" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentNode.innerHTML='<div class=no-img><span class=ni-icon>🖼️</span><span class=ni-lbl>로드 실패</span></div>'">`;}
+  else{imgWrap.innerHTML=`<div class="img-ph">⏳</div>`;imgWrap.dataset.appid=String(app.id);imgWrap.dataset.icon=app.icon;imgObs.observe(imgWrap);}
   card.appendChild(imgWrap);
-  const body=document.createElement('div'); body.className='cbody';
+  const body=document.createElement('div');body.className='cbody';
   const urlHtml=app.url?`<a class="curl" href="${app.url}" target="_blank" rel="noopener noreferrer">🔗 ${shortHost(app.url)}</a>`:`<span class="cnurl">URL 미입력</span>`;
   body.innerHTML=`<div class="cr1"><span class="ccode">${app.code}</span><span class="ctag">${app.catIcon} ${app.cat}</span></div><div class="cname">${app.name}</div><div class="cr3"><span class="csub">${app.sub}</span><span class="cdate">📅 ${app.date||today()}</span></div>${urlHtml}`;
   card.appendChild(body);
-  const acts=document.createElement('div'); acts.className='cacts';
+  const acts=document.createElement('div');acts.className='cacts';
   acts.innerHTML=`<button class="bv">🔍 상세</button><button class="be">✏️ 수정</button><button class="bd">🗑️ 삭제</button>`;
   acts.querySelector('.bv').onclick=e=>{e.stopPropagation();openDetail(cid,idx);};
   acts.querySelector('.be').onclick=e=>{e.stopPropagation();openEdit(cid,idx);};
@@ -545,36 +507,34 @@ function makeCard(app,cid,idx){
   return card;
 }
 
-// ─── 렌더 ─────────────────────────────────────────────
 function renderSide(){
-  const sb=document.getElementById('sidebar'); sb.innerHTML='<div class="side-label">카테고리</div>';
+  const sb=document.getElementById('sidebar');sb.innerHTML='<div class="side-label">카테고리</div>';
   const tot=Object.values(ST).reduce((s,a)=>s+a.length,0);
-  const all=document.createElement('div'); all.className='side-item'+(CAT==='all'?' active':'');
-  all.innerHTML=`<span>📋</span>전체 보기<span class="side-count">${tot}</span>`; all.onclick=()=>{CAT='all';renderAll();}; sb.appendChild(all);
-  CATS.forEach(c=>{ const el=document.createElement('div'); el.className='side-item'+(CAT===c.id?' active':''); el.innerHTML=`<span>${c.icon}</span>${c.name}<span class="side-count">${ST[c.id].length}</span>`; el.onclick=()=>{CAT=c.id;renderAll();document.getElementById('s'+c.id)?.scrollIntoView({behavior:'smooth',block:'start'});}; sb.appendChild(el); });
+  const all=document.createElement('div');all.className='side-item'+(CAT==='all'?' active':'');
+  all.innerHTML=`<span>📋</span>전체 보기<span class="side-count">${tot}</span>`;all.onclick=()=>{CAT='all';renderAll();};sb.appendChild(all);
+  CATS.forEach(c=>{const el=document.createElement('div');el.className='side-item'+(CAT===c.id?' active':'');el.innerHTML=`<span>${c.icon}</span>${c.name}<span class="side-count">${ST[c.id].length}</span>`;el.onclick=()=>{CAT=c.id;renderAll();document.getElementById('s'+c.id)?.scrollIntoView({behavior:'smooth',block:'start'});};sb.appendChild(el);});
 }
 function renderFilter(){
-  const fr=document.getElementById('frow'); fr.innerHTML='';
-  const all=document.createElement('div'); all.className='fchip'+(CAT==='all'?' active':''); all.textContent='전체 보기'; all.onclick=()=>{CAT='all';renderAll();}; fr.appendChild(all);
-  CATS.forEach(c=>{ const ch=document.createElement('div'); ch.className='fchip'+(CAT===c.id?' active':''); ch.innerHTML=`${c.icon} ${c.name}`; ch.onclick=()=>{CAT=c.id;renderAll();document.getElementById('s'+c.id)?.scrollIntoView({behavior:'smooth',block:'start'});}; fr.appendChild(ch); });
+  const fr=document.getElementById('frow');fr.innerHTML='';
+  const all=document.createElement('div');all.className='fchip'+(CAT==='all'?' active':'');all.textContent='전체 보기';all.onclick=()=>{CAT='all';renderAll();};fr.appendChild(all);
+  CATS.forEach(c=>{const ch=document.createElement('div');ch.className='fchip'+(CAT===c.id?' active':'');ch.innerHTML=`${c.icon} ${c.name}`;ch.onclick=()=>{CAT=c.id;renderAll();document.getElementById('s'+c.id)?.scrollIntoView({behavior:'smooth',block:'start'});};fr.appendChild(ch);});
 }
 function renderSections(){
-  const con=document.getElementById('sections'); con.innerHTML='';
+  const con=document.getElementById('sections');con.innerHTML='';
   const list=CAT==='all'?CATS:CATS.filter(c=>c.id===CAT);
   list.forEach(cat=>{
     const apps=ST[cat.id];
-    const sec=document.createElement('div'); sec.className='section'; sec.id='s'+cat.id;
+    const sec=document.createElement('div');sec.className='section';sec.id='s'+cat.id;
     sec.innerHTML=`<div class="sec-hdr"><div class="sec-name"><span>${cat.icon}</span>${cat.name}<span class="sec-cnt">${apps.length}종</span></div><button class="add-btn" onclick="addApp('${cat.id}')">＋ 앱 추가</button></div><div class="sec-desc">${cat.desc}</div>`;
-    const grid=document.createElement('div'); grid.className='grid';
+    const grid=document.createElement('div');grid.className='grid';
     apps.forEach((app,i)=>grid.appendChild(makeCard(app,cat.id,i)));
     const rem=apps.length%5,ec=rem===0?5:5-rem;
-    for(let i=0;i<ec;i++){ const sl=document.createElement('div'); sl.className='empty'; sl.innerHTML=`<div class="empty-in">${i===0?'<div class="e-plus">＋</div><div class="e-lbl">앱 추가</div>':''}</div>`; if(i===0)sl.onclick=()=>addApp(cat.id); grid.appendChild(sl); }
-    sec.appendChild(grid); const dv=document.createElement('div'); dv.className='divider'; sec.appendChild(dv); con.appendChild(sec);
+    for(let i=0;i<ec;i++){const sl=document.createElement('div');sl.className='empty';sl.innerHTML=`<div class="empty-in">${i===0?'<div class="e-plus">＋</div><div class="e-lbl">앱 추가</div>':''}</div>`;if(i===0)sl.onclick=()=>addApp(cat.id);grid.appendChild(sl);}
+    sec.appendChild(grid);const dv=document.createElement('div');dv.className='divider';sec.appendChild(dv);con.appendChild(sec);
   });
 }
-function renderAll(){ renderSide(); renderFilter(); renderSections(); }
+function renderAll(){renderSide();renderFilter();renderSections();}
 
-// ─── 초기화 ───────────────────────────────────────────
 loadMeta();
 applyTheme();
 renderAll();
